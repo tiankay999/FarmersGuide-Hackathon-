@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../features/auth/providers/auth_provider.dart';
-import '../features/auth/ui/login_screen.dart';
-import '../features/home/app_shell.dart';
+
+import 'package:agromate/features/auth/providers/auth_provider.dart';
+import 'package:agromate/features/auth/ui/login_screen.dart';
+import 'package:agromate/features/home/app_shell.dart' as shell;
+
 
 class FarmersGuideApp extends ConsumerWidget {
   const FarmersGuideApp({super.key});
@@ -17,7 +19,7 @@ class FarmersGuideApp extends ConsumerWidget {
       home: authState.when(
         data: (user) {
           if (user == null) return const LoginScreen();
-          return  AppShell();
+return const shell.AppShell();
 
         },
         loading: () => const Scaffold(
