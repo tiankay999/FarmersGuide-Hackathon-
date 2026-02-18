@@ -54,3 +54,6 @@ GoogleService-Info.plist
 
 # Misc
 *.lock
+
+
+.env.example

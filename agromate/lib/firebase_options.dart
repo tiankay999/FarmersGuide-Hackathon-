@@ -49,7 +49,7 @@ class DefaultFirebaseOptions {
         );
     }
   }
-
+// the api keys placed in an env file
 static FirebaseOptions get android => FirebaseOptions(
     apiKey: dotenv.get('ANDROID_API_KEY'),
     appId: dotenv.get('ANDROID_APP_ID'),
