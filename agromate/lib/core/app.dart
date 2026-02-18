@@ -6,8 +6,8 @@ import 'package:agromate/features/auth/ui/login_screen.dart';
 import 'package:agromate/features/home/app_shell.dart' as shell;
 
 
-class FarmersGuideApp extends ConsumerWidget {
-  const FarmersGuideApp({super.key});
+class AgromateApp extends ConsumerWidget {
+  const AgromateApp ({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -49,23 +50,23 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD6f86pHLu3R1QGoK4DUe0A3ipTnmhDFc4',
-    appId: '1:408754876929:android:78135e407aec8cc17a0600',
-    messagingSenderId: '408754876929',
-    projectId: 'farmers-guide-3e490',
-    storageBucket: 'farmers-guide-3e490.firebasestorage.app',
+static FirebaseOptions get android => FirebaseOptions(
+    apiKey: dotenv.get('ANDROID_API_KEY'),
+    appId: dotenv.get('ANDROID_APP_ID'),
+    messagingSenderId: dotenv.get('MESSAGING_SENDER_ID'),
+    projectId: dotenv.get('PROJECT_ID'),
+    storageBucket: dotenv.get('STORAGE_BUCKET'),
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBpK90SG9jYAKF0DudoQrQzIhfge-QcGcs',
-    appId: '1:408754876929:ios:59bcdfd4d3d7e71d7a0600',
-    messagingSenderId: '408754876929',
-    projectId: 'farmers-guide-3e490',
-    storageBucket: 'farmers-guide-3e490.firebasestorage.app',
-    androidClientId: '408754876929-nbijlob7u5f6qmr8dc2klgekf4ghchif.apps.googleusercontent.com',
-    iosClientId: '408754876929-csjlsclvjutancg67bnihcmh204mh0kq.apps.googleusercontent.com',
-    iosBundleId: 'com.example.agromate',
+  static FirebaseOptions get ios => FirebaseOptions(
+    apiKey: dotenv.get('IOS_API_KEY'),
+    appId: dotenv.get('IOS_APP_ID'),
+    messagingSenderId: dotenv.get('MESSAGING_SENDER_ID'),
+    projectId: dotenv.get('PROJECT_ID'),
+    storageBucket: dotenv.get('STORAGE_BUCKET'),
+    androidClientId: dotenv.get('ANDROID_CLIENT_ID'),
+    iosClientId: dotenv.get('IOS_CLIENT_ID'),
+    iosBundleId: dotenv.get('IOS_BUNDLE_ID'),
   );
 
 }
