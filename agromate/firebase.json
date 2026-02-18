@@ -1,1 +1,39 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"farmers-guide-3e490","appId":"1:408754876929:android:78135e407aec8cc17a0600","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"farmers-guide-3e490","configurations":{"android":"1:408754876929:android:78135e407aec8cc17a0600","ios":"1:408754876929:ios:59bcdfd4d3d7e71d7a0600"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "farmers-guide-3e490",
+          "appId": "1:408754876929:android:78135e407aec8cc17a0600",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "farmers-guide-3e490",
+          "configurations": {
+            "android": "1:408754876929:android:78135e407aec8cc17a0600",
+            "ios": "1:408754876929:ios:59bcdfd4d3d7e71d7a0600"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}
